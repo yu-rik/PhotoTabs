@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		7AC26F5A24A393D3002DAEB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC26F5924A393D3002DAEB9 /* AppDelegate.swift */; };
 		7AC26F5C24A393D3002DAEB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC26F5B24A393D3002DAEB9 /* SceneDelegate.swift */; };
-		7AC26F5E24A393D3002DAEB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC26F5D24A393D3002DAEB9 /* ViewController.swift */; };
 		7AC26F6124A393D3002DAEB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AC26F5F24A393D3002DAEB9 /* Main.storyboard */; };
 		7AC26F6324A393D4002DAEB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AC26F6224A393D4002DAEB9 /* Assets.xcassets */; };
 		7AC26F6624A393D4002DAEB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AC26F6424A393D4002DAEB9 /* LaunchScreen.storyboard */; };
+		7AC26F6E24A3974A002DAEB9 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC26F6D24A3974A002DAEB9 /* PhotosCollectionViewController.swift */; };
+		7AC26F7024A3BCE8002DAEB9 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC26F6F24A3BCE8002DAEB9 /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7AC26F5624A393D3002DAEB9 /* PhotoTabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoTabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC26F5924A393D3002DAEB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AC26F5B24A393D3002DAEB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7AC26F5D24A393D3002DAEB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7AC26F6024A393D3002DAEB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7AC26F6224A393D4002DAEB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AC26F6524A393D4002DAEB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AC26F6724A393D4002DAEB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AC26F6D24A3974A002DAEB9 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		7AC26F6F24A3BCE8002DAEB9 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,10 @@
 		7AC26F5824A393D3002DAEB9 /* PhotoTabs */ = {
 			isa = PBXGroup;
 			children = (
+				7AC26F6D24A3974A002DAEB9 /* PhotosCollectionViewController.swift */,
+				7AC26F6F24A3BCE8002DAEB9 /* PhotoCell.swift */,
 				7AC26F5924A393D3002DAEB9 /* AppDelegate.swift */,
 				7AC26F5B24A393D3002DAEB9 /* SceneDelegate.swift */,
-				7AC26F5D24A393D3002DAEB9 /* ViewController.swift */,
 				7AC26F5F24A393D3002DAEB9 /* Main.storyboard */,
 				7AC26F6224A393D4002DAEB9 /* Assets.xcassets */,
 				7AC26F6424A393D4002DAEB9 /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AC26F5E24A393D3002DAEB9 /* ViewController.swift in Sources */,
+				7AC26F7024A3BCE8002DAEB9 /* PhotoCell.swift in Sources */,
+				7AC26F6E24A3974A002DAEB9 /* PhotosCollectionViewController.swift in Sources */,
 				7AC26F5A24A393D3002DAEB9 /* AppDelegate.swift in Sources */,
 				7AC26F5C24A393D3002DAEB9 /* SceneDelegate.swift in Sources */,
 			);
