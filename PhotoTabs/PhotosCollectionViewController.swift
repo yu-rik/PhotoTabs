@@ -12,6 +12,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     let itemsRow: CGFloat = 2 // количество ячеек
     let sectionsInsert = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     
+    let photos = ["dog1", "dog2", "dog3", "dog4", "dog5", "dog6", "dog7", "dog8", "dog9", "dog10", "dog11", "dog12", "dog13", "dog14", "dog15" ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,16 @@ class PhotosCollectionViewController: UICollectionViewController {
 
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailPhotoSegue" {
+            //добираемся до того контроллера на который переходим
+            let photoDetailVC = segue.destination as! PhotoDetailViewController
+            // добираемся до ячейки контроллера с которой передаем изображение
+            let cell = sender as! PhotoCell
+            //передаем фотку с ячейки на второй экран деталей (PhotoDetailViewController)
+            photoDetailVC.image = cell.dogImageView.image
+        }
+    }
     
     // MARK: UICollectionViewDataSource
 
@@ -36,12 +47,18 @@ class PhotosCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 15
+        return photos.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoCell
-        cell.backgroundColor = .black
+        
+        //добираемся до объектов массива и до фоток в папке assets
+        let imageName = photos[indexPath.item]
+        let image = UIImage(named: imageName)
+        
+        cell.dogImageView.image = image
+       // cell.backgroundColor = .black
        
     
         return cell
