@@ -20,6 +20,12 @@ class PhotoDetailViewController: UIViewController {
     }
     
     @IBAction func shareAction(_ sender: UIButton) {
+        
+        let shareController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+        
+        
+        present(shareController, animated: true, completion: nil)
+        
     }
     
 
