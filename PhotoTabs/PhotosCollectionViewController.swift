@@ -9,8 +9,8 @@
 import UIKit
 
 class PhotosCollectionViewController: UICollectionViewController {
-    let itemsRow: CGFloat = 2 // количество ячеек
-    let sectionsInsert = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    let itemsRow: CGFloat = 1 // количество ячеек
+    let sectionsInsert = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     
     let photos = ["dog1", "dog2", "dog3", "dog4", "dog5", "dog6", "dog7", "dog8", "dog9", "dog10", "dog11", "dog12", "dog13", "dog14", "dog15" ]
     
@@ -66,6 +66,9 @@ class PhotosCollectionViewController: UICollectionViewController {
 }
 extension PhotosCollectionViewController : UICollectionViewDelegateFlowLayout {
   
+    
+   // let itemsRow: CGFloat = 1 // количество ячеек
+   // let sectionsInsert = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     //метод для настройки ячеек
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //фиксируем количество объектов на ряд
@@ -88,3 +91,26 @@ extension PhotosCollectionViewController : UICollectionViewDelegateFlowLayout {
         return sectionsInsert.left
     }
 }
+/*
+ //метод для настройки ячеек
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //фиксируем количество объектов на ряд
+        
+        let paddingWidth = sectionsInsert.left * (itemsRow + 1)
+        let avalibleWidth = collectionView.frame.width - paddingWidth
+        let widthItem = avalibleWidth/itemsRow
+        return CGSize(width: widthItem, height: widthItem)
+    }
+
+    //отступы ячеек
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionsInsert
+    }
+    // отступы по ляиниям
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionsInsert.left
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionsInsert.left
+    }
+ */
